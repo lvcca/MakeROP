@@ -16,6 +16,9 @@ Syntax: bypass 0x41414141 junk
 
 ![image](https://user-images.githubusercontent.com/49540886/141692505-afc23af6-4e44-44da-ae8f-48fa304ae361.png)
 
+<h3>Set bad chars</h3>
+
+![image](https://user-images.githubusercontent.com/49540886/141701335-b92b42c0-548e-40fd-8995-ced5f01596dc.png)
 
 <h1>Get ROP chain</h1>
 
