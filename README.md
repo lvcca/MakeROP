@@ -5,7 +5,7 @@ Automate ROP chain creation with known good instruction file.
 Instruction file line formats must match the gadget file format.
 This was created with output from rp++.
 
-Prepend 'byass' to desired gadget line to input custom value.
+Prepend 'bypass' to desired gadget line to input custom value.
 Syntax: bypass 0x41414141 junk
 
 <h1>Set input files</h1>
