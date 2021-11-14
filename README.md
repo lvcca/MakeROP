@@ -11,5 +11,5 @@ This was created with output from rp++.
 
 <h1>Get ROP chain</h1>
 
-![image](https://user-images.githubusercontent.com/49540886/141690372-54dfb18c-8e7c-4a03-bd77-3c598e8c2cb3.png)
+![image](https://user-images.githubusercontent.com/49540886/141691531-b2338732-3086-4d8e-80a6-09b5f345d64f.png)
 
