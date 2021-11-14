@@ -27,6 +27,9 @@ for line in desired_file.readlines():
 
 #Find matching gadget
 def find_this_gadget(query):
+        if 'bypass' in query:
+                return query
+
         matches = []
         #this value can be anything larger than expected output
         smallest_match = 1000
@@ -65,7 +68,11 @@ pound = '#'
 print('ropchain = b"" %s Initialize ropchain' % pound)
 
 for g in ropchain:
-        if "Could not find gadget for " not in g:
+        if "bypass" in g:
+                print("ropchain += pack('<L', (%s)) %s %s" % (g.split(' ')[1], pound, g))
+
+        elif "Could not find gadget for " not in g:
                 print("ropchain += pack('<L', (%s)) %s %s" % (g.split(':')[0], pound, g))
+
         else:
                 print("ropchain += pack('<L', (?)) %s %s" % (pound, g))
