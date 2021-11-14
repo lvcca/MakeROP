@@ -18,13 +18,13 @@ bad_chars = [ 0x00, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x20 ]
 
 def check_bad_chars(addr):
 	global bad_chars
-	print(addr)
+	#print(addr)
 	addr = int(addr, 0)
 	test = struct.unpack('4B', struct.pack('>I', addr))
 	found_bad_flag = False
 	for bad in bad_chars:
 		if bad in test:
-			print('Bad char %d found in %s' % (bad, test))
+			#print('Bad char %d found in %s' % (bad, test))
 			found_bad_flag = True
 
 	if found_bad_flag == False:
