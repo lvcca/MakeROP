@@ -68,4 +68,4 @@ for g in ropchain:
         if "Could not find gadget for " not in g:
                 print("ropchain += pack('>L', (%s)) %s %s" % (g.split(':')[0], pound, g))
         else:
-                print("\nropchain += pack('>L', (?)) %s %s\n" % (pound, g))
+                print("ropchain += pack('>L', (?)) %s %s" % (pound, g))
