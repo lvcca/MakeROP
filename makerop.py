@@ -35,10 +35,11 @@ def find_this_gadget(query):
         for gadget in all_gadgets:
                 if len(gadget.split(':')) == 2:
                         addr, other = gadget.split(':')
-                        if query in other:
-                                matches.append(gadget.strip())
-                                if len(gadget) < smallest_match:
-                                        smallest_match = len(gadget)
+                        if len(query.split(' ')) != 1:
+                                if query in other:
+                                        matches.append(gadget.strip())
+                                        if len(gadget) < smallest_match:
+                                                smallest_match = len(gadget)
         #if no match found
         if len(matches) == 0:
                 return "[*] Could not find gadget for %s" % query
