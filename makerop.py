@@ -46,7 +46,7 @@ for line in desired_file.readlines():
 
 #Find matching gadget
 def find_this_gadget(query):
-        if 'bypass' or '#' in query:
+        if 'bypass' in query or '#' in query:
                 return query
 
         matches = []
