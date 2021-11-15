@@ -14,7 +14,7 @@ Include comments by prepending '#' to line in desired gadgets file.
 
 <h1>Set input files</h1>
 
-![image](https://user-images.githubusercontent.com/49540886/141837276-3f0b3920-8500-4fba-8233-2defdc6415c1.png)
+![image](https://user-images.githubusercontent.com/49540886/141837395-4568b608-b11d-4ac8-8b8d-27461c8c3a8e.png)
 
 <h3>Example of desired gadgets file</h3>
 
