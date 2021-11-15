@@ -18,7 +18,7 @@ Include comments by prepending '#' to line in desired gadgets file.
 
 <h3>Example of desired gadgets file</h3>
 
-![image](https://user-images.githubusercontent.com/49540886/141692505-afc23af6-4e44-44da-ae8f-48fa304ae361.png)
+![image](https://user-images.githubusercontent.com/49540886/141815435-b1520470-592c-4a22-9647-11bf091c49c4.png)
 
 <h3>Set bad chars</h3>
 
@@ -26,4 +26,4 @@ Include comments by prepending '#' to line in desired gadgets file.
 
 <h1>Get ROP chain</h1>
 
-![image](https://user-images.githubusercontent.com/49540886/141692209-bc9cc037-23ba-4768-a998-5f8590bd6a4d.png)
+![image](https://user-images.githubusercontent.com/49540886/141815402-dc2389a4-56c0-4d84-8536-93bab0625827.png)
