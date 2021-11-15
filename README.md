@@ -7,10 +7,10 @@ Gadget returned is smallest sized match.
 This was created with output from rp++.
 
 Prepend 'bypass' to desired gadget line to input custom value.
-  <i>Syntax: bypass 0x41414141 junk</i>
+&#9&#9&#9<i>Syntax: bypass 0x41414141 junk</i>
 
 Include comments by prepending '#' to line in desired gadgets file.
-  <i>#This is comment</i>
+&#9&#9&#9<i>Syntax: #This is comment</i>
 
 <h1>Set input files</h1>
 
