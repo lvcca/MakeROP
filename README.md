@@ -3,10 +3,14 @@ Make ROP chain building simple with rp++ output file.
 
 Automate ROP chain creation with known good instruction file.
 Instruction file line formats must match the gadget file format.
+Gadget returned is smallest sized match.
 This was created with output from rp++.
 
 Prepend 'bypass' to desired gadget line to input custom value.
-Syntax: bypass 0x41414141 junk
+  <i>Syntax: bypass 0x41414141 junk</i>
+
+Include comments by prepending '#' to line in desired gadgets file.
+  <i>#This is comment</i>
 
 <h1>Set input files</h1>
 
