@@ -27,3 +27,16 @@ Include comments by prepending '#' to line in desired gadgets file.
 <h1>Get ROP chain</h1>
 
 ![image](https://user-images.githubusercontent.com/49540886/141815402-dc2389a4-56c0-4d84-8536-93bab0625827.png)
+
+<h1>Get Matched gadgets</h1>
+
+![image](https://user-images.githubusercontent.com/49540886/143503289-0d08776a-0e35-4a5e-9f14-a4bb912acbe9.png)
+
+<h1>Import as module</h1>
+
+![image](https://user-images.githubusercontent.com/49540886/143503365-78801222-08bd-4ef4-a211-7228573c2e29.png)
+
+returns (b'MATCHED_ROPCHAIN', errors_flag)
+if True: no errors
+
+![image](https://user-images.githubusercontent.com/49540886/143503425-8413b488-9c8f-427a-8901-2fbaa157292f.png)
