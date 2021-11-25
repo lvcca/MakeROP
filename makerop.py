@@ -114,7 +114,6 @@ def build_ROP():
 			try:
 				output += struct.pack('<L', int(addr, 0)) 
 			except:
-				print(type(addr))
 				error_flag = True
 				continue
 		else:
