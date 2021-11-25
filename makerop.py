@@ -121,7 +121,8 @@ def build_ROP():
 			error_flag = True
 
 		linenumber+=1
-
+		
+	#Returns true if no errors
 	if error_flag == False:
 		return output, True
 	elif error_flag == True:
