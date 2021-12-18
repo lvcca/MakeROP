@@ -76,7 +76,10 @@ def find_this_gadget(query):
 			result_matches.append(match)
 	#return match
 	#print('[*] Found %d matches for "%s."' % (len(matches), query))
-	return result_matches[random.randint(0, len(result_matches)-1)]
+	
+	#Switch the commented return to get randomized results, else the first entry in list will be returned -- first entry might be better for exploit development 
+	#return result_matches[random.randint(0, len(result_matches)-1)]
+	return result_matches[0]
 
 
 def build_ROP():
