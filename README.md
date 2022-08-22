@@ -13,9 +13,9 @@ Include comments by prepending '#' to line in desired gadgets file.
 <i>Syntax: #This is comment</i>
 
 ```python
-import makeROP
+import MakeROP
 
-a = makeROP.makeROP()
+a = MakeROP.makeROP()
 
 a.set_gadget_files([('FILENAME', 0xPREFBASEADDR)])
 a.set_bad_chars([0x00, 0x09, 0x0A, ...])
