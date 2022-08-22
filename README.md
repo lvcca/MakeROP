@@ -13,7 +13,7 @@ Include comments by prepending '#' to line in desired gadgets file.
 <i>Syntax: #This is comment</i>
 
 ```python
-import MakeROP
+import makeROP
 
 a = makeROP.makeROP()
 
