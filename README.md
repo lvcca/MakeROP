@@ -15,7 +15,7 @@ Include comments by prepending '#' to line in desired gadgets file.
 ```python
 import MakeROP
 
-a = MakeROP.makeROP()
+a = makeROP.makeROP()
 
 a.set_gadget_files([('FILENAME', 0xPREFBASEADDR)])
 a.set_bad_chars([0x00, 0x09, 0x0A, ...])
