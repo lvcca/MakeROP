@@ -262,9 +262,9 @@ class makeROP:
 
 
 if __name__ == '__main__':
-	import makeROP_test
 	import argparse
-	
+
+
 	p = argparse.ArgumentParser()
 	p.add_argument('-gf', '--gadget_file', nargs='+', type=str, help='RP++ gadget output file(s). Pass as tuple with preferred base addr.')
 	p.add_argument('-dg', '--desired_gadgets', type=str, help='Desired gadgets file.')
@@ -274,6 +274,8 @@ if __name__ == '__main__':
 
 	args = p.parse_args()
 
+	if len(sys.argv) <= 1:
+		p.print_help()
 
 	if args.gadget_file and args.desired_gadgets:
 		a = makeROP_test.makeROP()
