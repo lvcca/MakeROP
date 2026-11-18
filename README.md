@@ -12,19 +12,22 @@ Prepend 'bypass' to desired gadget line to input custom value.
 Include comments by prepending '#' to line in desired gadgets file.
 <i>Syntax: #This is comment</i>
 
+### from example.py
+
 ```python
-import MakeROP
+from MakeROP import MakeROP
 
-a = MakeROP.MakeROP()
+_makeROP = MakeROP()
 
-a.set_gadget_files([('FILENAME', 0xPREFBASEADDR)])
-a.set_bad_chars([0x00, 0x09, 0x0A, ...])
+_makeROP.set_gadget_files([('./node_gadgets.txt', 0x10000000)])
 
-a.set_ASLR(True)
+_makeROP.set_bad_chars([0x00, 0x09, 0x0A])
+
+_makeROP.set_ASLR(True)
 #IF ASLR, set new base address
-a.set_base([0xNEWADDRESS])
+_makeROP.set_base([1145311796])
 
-a.set_desired_gadgets(
+_makeROP.set_desired_gadgets(
 	[
 	'mov eax, esi; pop esi; ret',
 	'bypass 0x42424242 junk',
@@ -36,11 +39,7 @@ a.set_desired_gadgets(
 	'mov ecx, eax ; mov eax, esi ; pop esi ; retn 0x0010',
 	'bypass 0x41414141 junk'])
 
-b = a.build_ROP()
+_builtROP = _makeROP.build_ROP()
 
-print(b)
+print(_builtROP)
 ```
-
-![image](https://user-images.githubusercontent.com/49540886/147863456-e99314e3-ccf1-4d48-81eb-43b91d7ec1d6.png)
-
-![image](https://user-images.githubusercontent.com/49540886/147863460-dd26e8bb-8ffb-4106-b01b-75fd2f432e8f.png)
