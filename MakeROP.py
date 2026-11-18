@@ -5,9 +5,9 @@
 import sys
 import random
 import struct
+import argparse
 
-
-class makeROP:
+class MakeROP:
 
 	def __init__(self):
 
@@ -262,9 +262,7 @@ class makeROP:
 
 
 if __name__ == '__main__':
-	import argparse
-
-
+	
 	p = argparse.ArgumentParser()
 	p.add_argument('-gf', '--gadget_file', nargs='+', type=str, help='RP++ gadget output file(s). Pass as tuple with preferred base addr.')
 	p.add_argument('-dg', '--desired_gadgets', type=str, help='Desired gadgets file.')
@@ -278,28 +276,28 @@ if __name__ == '__main__':
 		p.print_help()
 
 	if args.gadget_file and args.desired_gadgets:
-		a = makeROP_test.makeROP()
-		a.set_gadget_files([(args.gadget_file[0], int(args.gadget_file[1], 0))])
+		_makeROP = makeROP()
+		_makeROP.set_gadget_files([(args.gadget_file[0], int(args.gadget_file[1], 0))])
 
 		if args.ASLR and args.base_addr:
 			if 'true' in args.ASLR or 'True' in args.ASLR:
-				a.set_ASLR(True)
+				_makeROP.set_ASLR(True)
 				
 			elif 'false' in args.ASLR or 'False' in args.ASLR:
-				a.set_ASLR(False)
+				_makeROP.set_ASLR(False)
 
-			a.set_base(args.base_addr)
+			_makeROP.set_base(args.base_addr)
 		
-		a.set_desired_gadgets_file(args.desired_gadgets)
+		_makeROP.set_desired_gadgets_file(args.desired_gadgets)
 
 		if args.bad_chars:
-			a.set_bad_chars(args.bad_chars)
+			_makeROP.set_bad_chars(args.bad_chars)
 
-		b = a.build_ROP()
+		_builtROP = _makeROP.build_ROP()
 
-		if b[1] is True and b[0] != '':
+		if _builtROP[1] is True and _builtROP[0] != '':
 			print('Successful ROPchain created!\n')
-			print(b[0])
+			print(_builtROP[0])
 		else:
 			print('Something went wrong..')
-			print(b[0])
+			print(_builtROP[0])
